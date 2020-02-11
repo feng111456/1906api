@@ -17,4 +17,7 @@ Route::get('/', function () {
 Route::get('/phpinfo', function () {
     phpinfo();
 });
-Route::any('/test','Test\TestController@test');
+/**测试路由 */
+Route::prefix('test')->group(function () {
+    Route::any('/redis','Test\TestController@testRedis');
+});
