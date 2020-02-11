@@ -17,3 +17,4 @@ Route::get('/', function () {
 Route::get('/phpinfo', function () {
     phpinfo();
 });
+Route::any('/test','Test\TestController@test');
